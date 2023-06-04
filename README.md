@@ -54,6 +54,37 @@ Please note that in order to access the restricted endpoints, you need to authen
 using the login endpoint: **/auth/login/**
 
 
+## Project Structure
+
+### config
+
+Project configuration settings are located there.
+
+### apischema app
+
+This app integrates **drf-yasg** urls into the project. **drf-yasg** module is responsible for the generation
+of Django REST API schema specification in accordance with Swagger/OpenAPI standards.
+
+### authentication app
+
+This app integrates **django-knox** into the project. **django-rest-knox** module provides token authentication for
+Django REST Framework APIs, it offers more advanced token authentication options than built into DRF 
+TokenAuthentication module.
+ 
+### pingapi app
+
+Provides demo endpoints to test the implemented token authentication procedure. 
+
+The first endpoints is protected and requires user authentication: 
+
+- https://127.0.0.1:8000/
+
+The second endpoint is not protected, and can be accessed anonymously:
+
+- https://127.0.0.1:8000/ping/
+
+
+
 
 
 
